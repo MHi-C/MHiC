@@ -4,10 +4,7 @@ Title: MHiC
 Version: 0.5.0
 Author: Saman Khakmardan
 Maintainer: Saman Khakmardan <s.khakmardan@gmail.com>
-Description: This tool can identify the significant interactions from Hi-C
-             data which is normalized by different tools such as HiC-Pro and HiCUP.
-Depends: R (>= 3.6.0), methods, utils, GenomicRanges, Biostrings
-          ,data.table,shiny,fdrtool ,  grDevices, graphics, Rcpp, stats, utils
+
 License: GNU GPL
 Encoding: UTF-8
 LazyData: true
