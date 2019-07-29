@@ -1,7 +1,7 @@
 \name{MHiC}
 \alias{MHiC}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
+\title{MHiC
 %%  ~~function to do ... ~~
 }
 \description{
