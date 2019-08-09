@@ -8,7 +8,7 @@ MHiC<-function(reads_file,Digest_file = NULL , outdir ,method="gothic",sample_na
                ,min_map = 0.8
                , biasfile="none", noOfPasses=1,
                noOfBins=100, mappabilityThreshold=1, distUpThres=-1,
-               distLowThres=-1
+               distLowThres=-1,plots=FALSE
                ){
   
   if(tools_name == 'HOMER' | tools_name == 'homer'){
@@ -17,13 +17,13 @@ MHiC<-function(reads_file,Digest_file = NULL , outdir ,method="gothic",sample_na
     
   }
  
-  
+
   message("MHiC processing started")
   #this tools get Hi-C data from different tools
   #function for get different Hi-C structure
   interactions<-get_Hic_data(reads_file,Digest_file,tools_name,method)
   
-  return(interactions)
+
  
     if( method=="gothic" || method=="GOTHiC"){
     
@@ -79,14 +79,17 @@ MHiC<-function(reads_file,Digest_file = NULL , outdir ,method="gothic",sample_na
                    biasfile=biasfile, noOfPasses=noOfPasses,
                    noOfBins=noOfBins, mappabilityThreshold=mappabilityThreshold, 
                    libname=sample_name, distUpThres=distUpThres,
-                   distLowThres=distLowThres)
+                   distLowThres=distLowThres,visual=plots)
     
     return("Finish")
     
   }
+  
+
   #save result
   if(remove==TRUE){
     print("Operation Successfully Completed")
+    
   if(save == TRUE){
     
   write.csv(finalResult,file=paste(sample_name, ".csv", sep=""),row.names = FALSE)
@@ -94,8 +97,9 @@ MHiC<-function(reads_file,Digest_file = NULL , outdir ,method="gothic",sample_na
   }
     return(finalResult)
   }
-  else{
+  else  if(remove==FALSE){
     print("Operation Successfully Completed")
+    
     if(save == TRUE){
       
       write.csv(Result,file=paste(sample_name, ".csv", sep=""),row.names = FALSE)

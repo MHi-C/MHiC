@@ -19,7 +19,7 @@ FitHiCm<-function(intersData ,fragsData, biasfile="none", noOfPasses=1,
     distLowThres <- (-Inf) #no lower bound
   }
   
-  print(intersData)
+
   r1 <- generate_FragPairs(fragsData, distUpThres, distLowThres)
   
   possibleInterAllCount <- r1[["possibleInterAllCount"]]
