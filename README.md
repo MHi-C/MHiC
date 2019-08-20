@@ -80,7 +80,7 @@ MHiC is written in R. To install MHiC from github:
 `install_github("Skhakmardan/MHiC")`  
 ##### 3.3.	Example:
 In this part we describe some example for use MHiC tool.
-Download MHiC_sample_data. Copy data folder in MHiC folder path.
+Download MHiC_sample_data (HiC-Pro data) from MHiC UI and Copy data folder in MHiC folder path.
 - 1.	Use MHiC function:  
 library(MHiC)  
 `dirPath <- system.file("data","HiC-Pro", package="MHiC")`  
