@@ -16,14 +16,14 @@ In order to create an integrated tool, we developed this tool based on a GOTHiC,
 #### 2. Description
 ##### 2.1. Data
 This tool can identify the significant interactions from Hi-C data which is normalized by different tools such as HiC-Pro. In this part, we describe tools and data structures, which are accepted by this tool.
-The HiC-Pro output is a triple matrix file with three columns: Locus1 id, Locus2 id and Interaction counts (number of interacting read between two regions), and a bed file with four columns: chromosome ID, fragment start position, fragment end position, and fragment ID.
-   
+The HiC-Pro output is a triple matrix file with three columns: Locus1 id, Locus2 id and Interaction counts (number of interacting read between two regions), and a bed file with four columns: chromosome ID, fragment start position, fragment end position, and fragment ID. 
 <p class="image" align="center">
 <img  src="https://github.com/MHi-C/MHiCUI/blob/master/image/s8.png">>
 <p align="center">Figure 1 HiC-Pro outputs. Interactions file (matrix) on the left and bed file on the right</p>
-</p>  
+</p>
 HiCUP outputs include two text files. A file with four columns: id, flag, chromosome and locus position and a digest file which includes chromosome ID, fragment start position, and fragment end position. This also noticeable that, in the first file, every two separate rows with the same id, define an interaction. In order to create this structure, users should use the hicup2gothic script, which is Available at the HiCUP tool.
-HOMER process FASTQ and bowtie2 files to map and perform quality control on Hi-C data. In this process, HOMER creates some CSV files to define Hi-C interactions for the next processing steps. In order to create this structure, users should visit the HOMER website.
+HOMER process FASTQ and bowtie2 files to map and perform quality control on Hi-C data. In this process, HOMER creates some CSV files to define Hi-C interactions for the next processing steps. In order to create this structure, users should visit the HOMER website.  
+  
 ##### 2.2.	Method
 We developed this tool based on GOTHiC, HiCNorm, and Fit-Hi-C methods. Also, we used cumulative binomial tests to identify significant interactions between distal genomic loci that have signiﬁcantly more reads than expected by the chance in Hi-C experiments. This also is also noticeable that cumulative binomial tests implemented based on GOTHiC and it is optional for users to apply it on other methods.  
 ##### 2.3.	Functions
